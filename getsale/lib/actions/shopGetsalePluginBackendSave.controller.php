@@ -52,7 +52,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
 
         if (isset($_COOKIE['getsale_disable'])) return 'Getsale disabled';
 
-        $domain = 'http://edge-dev.getsale.io';
+        $domain = 'https://getsale.io';
         $ch = curl_init();
         $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'wordpress'));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Accept: application/json'));
