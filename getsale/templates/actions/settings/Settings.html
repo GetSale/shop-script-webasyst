@@ -1,0 +1,60 @@
+<h1>[`GetSale settings`]</h1>
+<h3>[`GetSale description`]</h3>
+
+<div class="fields form">
+    <form action="?plugin=getsale&action=save" method="post" id="plugins-settings-form">
+        {$wa->csrf()}
+        <br/>
+        <p>[`Getsale Full Description`]</p>
+        <hr>
+
+        {if $id}
+            <p>[`GetSale Success install`]</p>
+        {/if}
+        <div class="field">
+            <div class="name">[`Email`]<br/>
+            </div>
+            <div class="value">
+                <input type="text" name="email"
+                       {if $id}disabled="disabled"{/if}
+                       value="{if isset($email)}{$email}{/if}"/>
+                {if $id}<img src="/wa-apps/shop/plugins/getsale/img/ok.png">{/if}
+            </div>
+        </div>
+        <div class="field">
+            <div class="name">[`API key`]<br/>
+            </div>
+            <div class="value">
+                <input type="text" name="api_key"
+                       {if $id}disabled="disabled"{/if}
+                       value="{if isset($api_key)}{$api_key}{/if}" />
+                {if $id}<img src="/wa-apps/shop/plugins/getsale/img/ok.png">{/if}
+            </div>
+            <img src="">
+        </div>
+
+        {if !$exist_curl }
+            <div style="padding: 20px; background-color: #ffccbf; margin-bottom: 20px;">
+                <i class="icon16 no"></i>[`No Curl`]
+            </div>
+        {/if}
+        {if !$id}
+        <div class="field">
+            <div class="value submit">
+                <input type="submit" class="button green" value="Сохранить">
+                <span id="plugins-settings-form-status" style="display:none">
+                    <i style="vertical-align:middle" class="icon16 yes"></i> [`Saved`]
+                </span>
+            </div>
+        </div>
+        {/if}
+        <div style="clear: both"></div>
+        <br/>
+        <hr>
+        {if !$id}
+        <p>[`Set fields`]</p>
+        <p>[`GetSale Register`]</p>
+        {/if}
+        <p>[`Support`]</p>
+    </form>
+</div>
