@@ -6,9 +6,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
         try {
             $getsale = wa()->getPlugin('getsale');
             $email = waRequest::post('email', '', waRequest::TYPE_STRING_TRIM);
-
             $api_key = waRequest::post('api_key', '', waRequest::TYPE_STRING_TRIM);
-
             //Save
             $getsale->saveSettings(array('email' => $email, 'api_key' => $api_key));
 
@@ -26,6 +24,8 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
                         throw new waException(_wp('500 Error'));
                     case 404:
                         throw new waException(_wp('404 Error'));
+                    case 0:
+                        throw new waException(_wp('No Curl!'));
                 }
             }
 
@@ -50,11 +50,17 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
     public function get($url, $email = '', $key = '') {
         if ($this->isUserAgentBanned($_SERVER['HTTP_USER_AGENT'])) return true;
 
-        if (isset($_COOKIE['getsale_disable'])) return 'Getsale disabled';
+        if (!function_exists('curl_init')) {
+            $json_result = '';
+            $json_result->status = 'error';
+            $json_result->code = 0;
+            $json_result->message = 'No Curl!';
+            return json_encode($json_result);
+        };
 
         $domain = 'https://getsale.io';
         $ch = curl_init();
-        $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'wordpress'));
+        $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'shopscript'));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Accept: application/json'));
         curl_setopt($ch, CURLOPT_URL, $domain . "/api/registration.json");
         curl_setopt($ch, CURLOPT_POST, 1);

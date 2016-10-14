@@ -13,13 +13,11 @@ return array(
     'frontend' => true,
     'handlers' => array(
         'frontend_head' => 'frontendHead',
-        'frontend_footer' => 'frontendFooter',
-        // emulate cart_set_quantity and cart_add event
         'routing' => 'routing',
-        'cart_add' => 'update_cart',
-        //'cart_set_quantity' => 'update_cart',
-        'cart_delete' => 'update_cart',
-        'order_action.create' => 'purchase',
-        'frontend_product' => 'view_product'
+        'frontend_product' => 'getsale_item_view',
+        'cart_add' => 'getsale_add_to_cart',
+        'cart_delete' => 'getsale_del_from_cart',
+        'order_action.create' => 'getsale_order',
+        'singup' => 'getsale_reg',
     ),
 );

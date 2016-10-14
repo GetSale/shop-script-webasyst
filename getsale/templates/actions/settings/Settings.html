@@ -8,6 +8,11 @@
         <p>[`Getsale Full Description`]</p>
         <hr>
 
+        {if !$exist_curl}
+        <div style="padding: 20px; background-color: #ffccbf; margin-bottom: 20px;">
+            <i class="icon16 no"></i>[`No Curl`]
+        </div>
+        {/if}
         {if $id}
             <p>[`GetSale Success install`]</p>
         {/if}
@@ -32,13 +37,7 @@
             </div>
             <img src="">
         </div>
-
-        {if !$exist_curl }
-            <div style="padding: 20px; background-color: #ffccbf; margin-bottom: 20px;">
-                <i class="icon16 no"></i>[`No Curl`]
-            </div>
-        {/if}
-        {if !$id}
+        {if !$id && $exist_curl}
         <div class="field">
             <div class="value submit">
                 <input type="submit" class="button green" value="Сохранить">
@@ -47,11 +46,9 @@
                 </span>
             </div>
         </div>
-        {/if}
         <div style="clear: both"></div>
         <br/>
         <hr>
-        {if !$id}
         <p>[`Set fields`]</p>
         <p>[`GetSale Register`]</p>
         {/if}
