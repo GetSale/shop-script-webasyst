@@ -85,7 +85,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
 
     function get_current_url() {
         $url = 'http';
-        if ($_SERVER["HTTPS"] == "on") {
+        if (waRequest::isHttps()) {
             $url .= "s";
         }
         $url .= "://";

@@ -1,8 +1,8 @@
 #GetSale
 Contributors: GetSale Team  
 Tags: getsale, popup, popups  
-Requires at least: 1.5.0  
-Tested up to: 1.5.13.56  
+Requires at least: 7.0.0
+Tested up to: 7.1.6.75  
 Stable tag: 1.0.0  
 License: GNU General Public License, version 3  
 
@@ -65,8 +65,9 @@ GetSale поможет вашему сайту нарастить контакт
 1. Выберите вкладку Плагины.
 2. В строке поиска введите GetSale.
 3. Установите плагин *GetSale*.
-4. Введите Еmail и полученный на сайте (GetSale)[https://getsale.io] и Ключ API.
-5. Если все указано верно, плагин заработает сразу после сохранения с настройками по умолчанию.
+4. Перейдите во вкладку Shop, и откройте раздел "Плагины"
+5. Введите Еmail и Ключ API полученный на сайте (GetSale)[https://getsale.io],.
+6. Если все указано верно, плагин заработает сразу после сохранения с настройками по умолчанию.
 
 Теперь вы можете создать виджеты в личном кабинете на (GetSale)[https://getsale.io].
 
