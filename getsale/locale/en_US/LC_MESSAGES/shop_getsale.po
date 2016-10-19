@@ -15,45 +15,48 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
+msgid "GetSale"
+msgstr "GetSale"
+
 msgid "GetSale settings"
-msgstr "Настройка GetSale"
+msgstr "GetSale settings"
 
 msgid "GetSale description"
-msgstr "GetSale &mdash; профессиональный инструмент для создания popup-окон"
+msgstr "GetSale &mdash; powerful cutting edge tool to create widgets and popups for your website!"
 
 msgid "No Curl!"
-msgstr "На хостинге не установлено расширение Curl"
+msgstr "You don't have Curl support in your PHP!"
 
 msgid "API key"
-msgstr "API key"
+msgstr "API Key"
 
 msgid "Email"
 msgstr "Email"
 
 msgid "Success"
-msgstr "Ваш сайт привязан к <a href='https://getsale.io' target='_blank'>GetSale</a>"
+msgstr "Congratulations! Your website is successfully linked to your <a href='https://getsale.io'>GetSale account</a>"
 
 msgid "403 Error"
-msgstr "Ошибка! Неверно введен Ключ API"
+msgstr "Attention! API Key is invalid. Please, check and enter API Key once again"
 
 msgid "404 Error"
-msgstr "Ошибка! Данный Email не зарегистрирован на сайте <a href='https://getsale.io'>GetSale</a>"
+msgstr "Attention! This Email isn’t registered on <a href='https://getsale.io'>GetSale</a>"
 
 msgid "500 Error"
-msgstr "Ошибка! Данный сайт уже используется на <a href='https://getsale.io'>GetSale</a>"
+msgstr "Attention! This website is already in use on <a href='https://getsale.io'>GetSale</a>"
 
 msgid "Support"
-msgstr "Служба поддержки: <a href='mailto:support@getsale.io'>support@getsale.io</a>"
+msgstr "Contact Us: <a href='mailto:support@getsale.io'>support@getsale.io</a>"
 
 msgid "Set fields"
-msgstr "Введите Email и Ключ API из личного кабинета GetSale."
+msgstr "Please, enter your Email and API Key from your GetSale account"
 
 msgid "GetSale Register"
-msgstr "Если вы еще не регистрировались в сервисе GetSale это можно сделать по ссылке <a href='https://getsale.io'>GetSale</a>"
+msgstr "If you don’t have GetSale account, you can register it <a href='https://getsale.io'>here</a>"
 
 msgid "GetSale Success install"
-msgstr "Поздравляем! Ваш сайт успешно привязан к аккаунту <a href='https://getsale.io'>GetSale</a><br/>Теперь вы можете создать виджеты в личном кабинете на <a href='https://getsale.io'>GetSale</a>."
+msgstr "Congratulations! Your website is successfully linked to your <a href='https://getsale.io'>GetSale account</a><br/>You can start creating widgets for your website using your <a href='https://getsale.io'>GetSale account</a>!"
 
 msgid "Getsale Full Description"
-msgstr "GetSale поможет вашему сайту нарастить контактную базу лояльных клиентов, информировать посетителей о предстоящих акциях, распродажах, раздавать промокоды, скидки и многое другое, что напрямую повлияет на конверсии покупателей и рост продаж."
+msgstr "GetSale is a powerful tool for creating all types of widgets for your website. You can increase your sales dramatically creating special offer, callback widgets, coupons blasts and many more. Create, Show and Sell - this is our goal!"
 

@@ -1,14 +1,13 @@
 <?php
 
 return array(
-    'name' => 'Getsale',
-    'description' => 'профессиональный инструмент для создания popup-окон',
+    'name' => 'Getsale Popup',
     'img'=>'img/getsale.png',
     'icons'=>array(
         16 => 'img/getsale.png'
     ),
     'shop_settings' => true,
-    'version' => '1.0',
+    'version' => '1.0.0',
     'vendor' => 1057714,
     'frontend' => true,
     'handlers' => array(

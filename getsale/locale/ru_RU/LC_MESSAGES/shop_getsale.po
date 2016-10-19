@@ -9,21 +9,23 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
-"X-Poedit-Language: Russian\n"
-"X-Poedit-Country: Russian Federation\n"
+"X-Poedit-Language: ru_RU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
+msgid "GetSale"
+msgstr "GetSale"
+
 msgid "GetSale settings"
 msgstr "Настройка GetSale"
 
 msgid "GetSale description"
-msgstr "GetSale &mdash; профессиональный инструмент для создания popup-окон"
+msgstr "GetSale &mdash; профессиональный инструмент для создания popup-окон!"
 
 msgid "No Curl!"
-msgstr "На хостинге не установлено расширение Curl"
+msgstr "На хостинге не установлено расширение Curl!"
 
 msgid "API key"
 msgstr "Ключ API"
@@ -32,7 +34,7 @@ msgid "Email"
 msgstr "Email"
 
 msgid "Success"
-msgstr "Ваш сайт привязан к <a href='https://getsale.io' target='_blank'>GetSale</a>"
+msgstr "Поздравляем! Ваш сайт успешно привязан к аккаунту <a href='https://getsale.io'>GetSale</a>"
 
 msgid "403 Error"
 msgstr "Ошибка! Неверно введен Ключ API"
