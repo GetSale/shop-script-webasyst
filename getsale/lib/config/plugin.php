@@ -9,7 +9,7 @@ return array(
     ),
     'shop_settings' => true,
     'version' => '1.0',
-    'vendor' => 'GetSale Team',
+    'vendor' => 1057714,
     'frontend' => true,
     'handlers' => array(
         'frontend_head' => 'frontendHead',
