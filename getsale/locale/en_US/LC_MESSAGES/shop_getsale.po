@@ -49,7 +49,7 @@ msgid "Support"
 msgstr "Contact Us: <a href='mailto:support@getsale.io'>support@getsale.io</a>"
 
 msgid "Set fields"
-msgstr "Please, enter your Email and API Key from your GetSale account"
+msgstr "Please, enter your Email and API Key from your GetSale account. <a href='https://help.getsale.io/ru/ustanovka-koda/ustanovka-plagina-dlya-cms-shop-script/' target='_blank'>FAQ</a>"
 
 msgid "GetSale Register"
 msgstr "If you don’t have GetSale account, you can register it <a href='https://getsale.io'>here</a>"
