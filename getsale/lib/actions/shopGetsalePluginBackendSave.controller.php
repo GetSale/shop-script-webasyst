@@ -48,7 +48,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
     }
 
     public function get($url, $email = '', $key = '') {
-        if ($this->isUserAgentBanned($_SERVER['HTTP_USER_AGENT'])) return true;
+        if ($this->isUserAgentBanned(waRequest::server('HTTP_USER_AGENT'))) return true;
 
         if (!function_exists('curl_init')) {
             $json_result = '';
@@ -89,10 +89,10 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
             $url .= "s";
         }
         $url .= "://";
-        if ($_SERVER["SERVER_PORT"] != "80") {
-            $url .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"];
+        if (waRequest::server('SERVER_PORT') != "80") {
+            $url .= waRequest::server('SERVER_NAME') . ":" . waRequest::server('SERVER_PORT');
         } else {
-            $url .= $_SERVER["SERVER_NAME"];
+            $url .= waRequest::server('SERVER_NAME');
         }
         return $url;
     }

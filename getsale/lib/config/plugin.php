@@ -9,7 +9,6 @@ return array(
     'shop_settings' => true,
     'version' => '1.0.0',
     'vendor' => 1057714,
-    'frontend' => true,
     'handlers' => array(
         'frontend_head' => 'frontendHead',
         'routing' => 'routing',
