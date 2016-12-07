@@ -3,9 +3,6 @@
 return array(
     'name' => 'Getsale Popup',
     'img'=>'img/getsale.png',
-    'icons'=>array(
-        16 => 'img/getsale.png'
-    ),
     'shop_settings' => true,
     'version' => '1.0.0',
     'vendor' => 1057714,
