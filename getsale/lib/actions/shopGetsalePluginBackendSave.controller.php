@@ -83,19 +83,16 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
         return json_encode($json_result);
     }
 
-    function get_current_url() {
-        if (wa()->getUser()->getRights('webasyst', 'backend')) {
-            $url = 'http';
-            if (waRequest::isHttps()) $url .= "s";
-            $url .= "://";
-            if (waRequest::server('SERVER_PORT') != "80") {
-                $url .= waRequest::server('SERVER_NAME') . ":" . waRequest::server('SERVER_PORT');
-            } else {
-                $url .= waRequest::server('SERVER_NAME');
-            }
-            return $url;
+    public function get_current_url() {
+        $url = 'http';
+        if (waRequest::isHttps()) $url .= "s";
+        $url .= "://";
+        if (waRequest::server('SERVER_PORT') != "80") {
+            $url .= waRequest::server('SERVER_NAME') . ":" . waRequest::server('SERVER_PORT');
+        } else {
+            $url .= waRequest::server('SERVER_NAME');
         }
-        throw new waException(_wp('GetSale is available for admin users only.'));
+        return $url;
     }
 
 }
