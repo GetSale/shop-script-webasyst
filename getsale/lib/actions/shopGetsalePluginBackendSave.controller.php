@@ -13,7 +13,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
             if (empty($email)) throw new waException(_wp('Не указан Email!'));
             if (empty($api_key)) throw new waException(_wp('Не указан Ключ API!'));
 
-            $url = $this->get_current_url();
+            $url = $this->getsale_current_url();
             $projectID = $this->get($url, $email, $api_key);
             $projectID = json_decode($projectID);
             if (is_object($projectID) && $projectID->status = 'Error') {
@@ -83,7 +83,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
         return json_encode($json_result);
     }
 
-    public function get_current_url() {
+    public function getsale_current_url() {
         $url = 'http';
         if (waRequest::isHttps()) $url .= "s";
         $url .= "://";
