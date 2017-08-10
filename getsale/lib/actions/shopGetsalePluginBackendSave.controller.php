@@ -10,27 +10,27 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
             //Save
             $getsale->saveSettings(array('email' => $email, 'api_key' => $api_key));
 
-            if (empty($email)) throw new waException(_wp('Не указан Email!'));
-            if (empty($api_key)) throw new waException(_wp('Не указан Ключ API!'));
+            if (empty($email)) throw new waException(_w('Не указан Email!'));
+            if (empty($api_key)) throw new waException(_w('Не указан Ключ API!'));
 
-            $url = $this->getsale_current_url();
+            $url = wa()->domainUrl();
             $projectID = $this->get($url, $email, $api_key);
             $projectID = json_decode($projectID);
             if (is_object($projectID) && $projectID->status = 'Error') {
                 switch ($projectID->code) {
                     case 403:
-                        throw new waException(_wp('403 Error'));
+                        throw new waException(_w('403 Error'));
                     case 500:
-                        throw new waException(_wp('500 Error'));
+                        throw new waException(_w('500 Error'));
                     case 404:
-                        throw new waException(_wp('404 Error'));
+                        throw new waException(_w('404 Error'));
                     case 0:
-                        throw new waException(_wp('No Curl!'));
+                        throw new waException(_w('No Curl!'));
                 }
             }
 
             $getsale->saveSettings(array('id' => $projectID->payload->projectId));
-            $this->response['message'] = _wp('Success');
+            $this->response['message'] = _w('Success');
         } catch (Exception $e) {
             $this->setError($e->getMessage());
         }
@@ -60,7 +60,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
 
         $domain = 'https://getsale.io';
         $ch = curl_init();
-        $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'shopscript'));
+        $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => rawurldecode($url), 'cms' => 'shopscript'));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Accept: application/json'));
         curl_setopt($ch, CURLOPT_URL, $domain . "/api/registration.json");
         curl_setopt($ch, CURLOPT_POST, 1);
@@ -81,18 +81,6 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
             return $info;
         }
         return json_encode($json_result);
-    }
-
-    public function getsale_current_url() {
-        $url = 'http';
-        if (waRequest::isHttps()) $url .= "s";
-        $url .= "://";
-        if (waRequest::server('SERVER_PORT') != "80") {
-            $url .= waRequest::server('SERVER_NAME') . ":" . waRequest::server('SERVER_PORT');
-        } else {
-            $url .= waRequest::server('SERVER_NAME');
-        }
-        return $url;
     }
 
 }
