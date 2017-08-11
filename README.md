@@ -3,7 +3,7 @@ Contributors: GetSale Team
 Tags: getsale, popup, popups  
 Requires at least: 7.0.0
 Tested up to: 7.1.6.75  
-Stable tag: 1.0.0  
+Stable tag: 1.0.2  
 License: GNU General Public License, version 3  
 
 **GetSale** &mdash; профессиональный инструмент для создания popup-окон.
@@ -74,6 +74,12 @@ GetSale поможет вашему сайту нарастить контакт
 Теперь вы можете создать виджеты в личном кабинете на (GetSale)[https://getsale.io].
 
 ##Changelog
+####1.0.1
+* Исправление ошибки при подключении проекта к GetSale
+
+####1.0.1
+* Исправление ошибок
+
 ####1.0.0
 * Релиз
 

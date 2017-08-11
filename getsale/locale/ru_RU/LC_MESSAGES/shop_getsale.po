@@ -24,8 +24,14 @@ msgstr "Настройка GetSale"
 msgid "GetSale description"
 msgstr "GetSale &mdash; профессиональный инструмент для создания popup-окон!"
 
-msgid "No Curl!"
+msgid "No Curl"
 msgstr "На хостинге не установлено расширение Curl!"
+
+msgid "No Email"
+msgstr "введите Email!"
+
+msgid "No API Key"
+msgstr "Введите ключ API!"
 
 msgid "API key"
 msgstr "Ключ API"

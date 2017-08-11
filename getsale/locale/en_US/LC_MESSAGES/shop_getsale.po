@@ -24,8 +24,14 @@ msgstr "GetSale settings"
 msgid "GetSale description"
 msgstr "GetSale &mdash; powerful cutting edge tool to create widgets and popups for your website!"
 
-msgid "No Curl!"
+msgid "No Curl"
 msgstr "You don't have Curl support in your PHP!"
+
+msgid "No Email"
+msgstr "Enter Email!"
+
+msgid "No API Key"
+msgstr "Enter API Key!"
 
 msgid "API key"
 msgstr "API Key"

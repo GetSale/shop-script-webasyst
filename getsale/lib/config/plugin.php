@@ -4,7 +4,7 @@ return array(
     'name' => 'Getsale Popup',
     'img'=>'img/getsale.png',
     'shop_settings' => true,
-    'version' => '1.0.2',
+    'version' => '1.0.1',
     'vendor' => 1057714,
     'handlers' => array(
         'frontend_head' => 'frontendHead',
