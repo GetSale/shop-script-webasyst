@@ -14,5 +14,5 @@ return array(
         'cart_delete' => 'getsale_del_from_cart',
         'order_action.create' => 'getsale_order',
         'singup' => 'getsale_reg',
-    ),
+    )
 );
