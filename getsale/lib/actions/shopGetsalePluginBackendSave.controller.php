@@ -20,7 +20,19 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
             }
 
             $url = wa()->getRootUrl(true);
-            $projectID = $this->get($url, $email, $api_key);
+            $url = parse_url($url);
+            $host = $url['host'];
+            if (preg_match('~^xn\-\-~', $host)) {
+                require_once('idna_convert.class.php');
+                $convert = new idna_convert();
+                $host = $convert->decode($host);
+            }
+
+            $path = isset($url['path']) ? urldecode($url['path']) : '';
+            $query = isset($url['query']) ? '?'.urldecode($url['query']) : '';
+            $convert_url = urldecode($url['scheme']) . '://' . $host . $path . $query;
+
+            $projectID = $this->get($convert_url, $email, $api_key);
             $projectID = json_decode($projectID);
             if (is_object($projectID) && $projectID->status = 'Error') {
                 switch ($projectID->code) {
