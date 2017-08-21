@@ -23,7 +23,7 @@ class shopGetsalePluginBackendSaveController extends waJsonController {
             $url = parse_url($url);
             $host = $url['host'];
             if (preg_match('~^xn\-\-~', $host)) {
-                require_once('idna_convert.class.php');
+                require_once('/wa-system/vendors/idna/idna_convert.class.php');
                 $convert = new idna_convert();
                 $host = $convert->decode($host);
             }
